@@ -39,6 +39,7 @@ struct FruitCardView: View {
           .frame(maxWidth: 480)
         // BUTTON: START
        StartButton()
+          .padding(.bottom, 20)
 
       } //: VSTACK
     } //: ZSTACK
@@ -51,6 +52,8 @@ struct FruitCardView: View {
     .background(LinearGradient(gradient: Gradient(colors: fruit.gradientColors), startPoint: .top, endPoint: .bottom))
     .cornerRadius(20)
     .padding(.horizontal, 20)
+    .padding(.vertical, 40)
+
   } //: BODY
 }
 
@@ -58,5 +61,6 @@ struct FruitCardView_Previews: PreviewProvider {
   static var previews: some View {
     FruitCardView(fruit: fruitsData[1])
       .previewLayout(.fixed(width: 320, height: 640))
+      .previewInterfaceOrientation(.portraitUpsideDown)
   }
 }

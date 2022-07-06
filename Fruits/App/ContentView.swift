@@ -36,7 +36,7 @@ struct ContentView: View {
           }
       )
     }
-    .navigationViewStyle(.stack) // wasn't in course, googled. error in console
+    .navigationViewStyle(StackNavigationViewStyle()) // wasn't in course, googled. fixes iPad sidebar when content is displayed like a iphone
   }
 }
 
